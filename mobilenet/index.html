@@ -51,18 +51,13 @@ limitations under the License.
 <body>
   <div class="tfjs-example-container">
     <section class='title-area'>
-      <h1>TensorFlow.js: Using a pretrained MobileNet</h1>
+      <h1>Trashnet</h1>
     </section>
 
     <section>
       <p class='section-head'>Description</p>
       <p>
-        This demo uses the pretrained MobileNet_25_224 model from Keras which you can find
-        <a href="https://github.com/fchollet/deep-learning-models/releases/download/v0.6/mobilenet_2_5_224_tf.h5">here</a>.
-
-        It is not trained to recognize human faces. For best performance, upload images of objects
-        like piano, coffee mugs, bottles, etc. You can see all the objects types it has been trained to recognize in <a
-          href="https://github.com/tensorflow/tfjs-examples/blob/master/mobilenet/imagenet_classes.js">imagenet_classes.js</a>.
+        We turn your trash into a class
       </p>
     </section>
 
@@ -74,13 +69,18 @@ limitations under the License.
     <section>
       <p class='section-head'>Model Output</p>
 
-      <div id="file-container" style="display: none">
-        Upload an image: <input type="file" id="files" name="files[]" multiple />
-      </div>
-
       <div id="predictions"></div>
 
-      <img style="display: none" id="cat" src="cat.jpg" width=224 height=224 />
+      <img style="" id="cat" src="cat.jpg" width=150 height=150 />
+
+      <video id="cameraEmbed" playsinline style=" -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            display: none;
+            ">
+            </video>
+            <canvas id="output" />
     </section>
 
     <script src="index.js"></script>
